@@ -37,6 +37,7 @@ export class ComicsComponent implements OnInit, OnDestroy {
               private globals: GlobalConstants) { }
 
   ngOnInit(): void {
+    this.yearOptions.push(0)
     for(let i = this.endYear; i >= this.startYear; i--) {
       this.yearOptions.push(i)
     }

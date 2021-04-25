@@ -4,19 +4,14 @@
     <div class="filter-container">
       <select name="year" [(ngModel)]="selectedYear" (change)="changeYear($event.target.value)">
         <option value="{{year}}" *ngFor="let year of yearOptions"
-          [attr.selected]="selectedYear == year">{{year}}</option>
+          [attr.selected]="selectedYear == year">
+          <p *ngIf="year == 0">ALL Years</p>
+          <p *ngIf="year != 0">{{year}}</p>
+        </option>
       </select>
       
       <input placeholder="search for comics by name or characters"
       name="searchField" [(ngModel)]="searchField" (change)="changeSearchField($event.target.value)"/>
-      
-      <div class="btn-group page-select">
-        <span>Pages:</span>
-        <button *ngFor="let page of comicPageMap | keyvalue"
-          [ngClass]="{'selected-page': selectedPage == page.key}"
-          class="page-btn" type="button" [value]="page.key"
-          (click)="changePage(page.key)">{{page.key}}</button>
-      </div>
     </div>
   </div>
 </div>
@@ -27,3 +22,13 @@
 <ng-template #loading>
   <app-loader></app-loader>
 </ng-template>
+
+<div class="container intro btn-group page-select">
+  <span>Pages:</span>
+  <div>
+    <button *ngFor="let page of comicPageMap | keyvalue"
+      [ngClass]="{'selected-page': selectedPage == page.key}"
+      class="page-btn" type="button" [value]="page.key"
+      (click)="changePage(page.key)">{{page.key}}</button>
+  </div>
+</div>

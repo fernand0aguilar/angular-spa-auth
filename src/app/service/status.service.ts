@@ -8,7 +8,7 @@ import { Comic } from '../model/comic.model';
 export class StatusService {
 
   private searchField = new BehaviorSubject<string>('');
-  private yearSelected = new BehaviorSubject<number>(2021);
+  private yearSelected = new BehaviorSubject<number>(0);
   private selectedComic = new BehaviorSubject<Comic>(null);
   private displayedComicList = new BehaviorSubject<Comic[]>([]);
   private isLoadingComics = new BehaviorSubject<boolean>(false);

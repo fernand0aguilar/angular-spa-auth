@@ -31,8 +31,11 @@ export class DataStorageService {
       params.set("format", "comic");
       params.set("formatType", "comic");
       params.set("noVariants", "true");
-      params.set("dateRange", `${year}-01-01,${year}-12-31`);
       params.set("orderBy", "title");
+      if(year.toString() !== '0'){
+        params.set("dateRange", `${year}-01-01,${year}-12-31`);
+      }
+
       if(title !== '')
         params.set("titleStartsWith", title);
 
