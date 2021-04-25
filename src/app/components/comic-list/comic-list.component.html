@@ -1,0 +1,18 @@
+
+<div *ngIf="comicList.length > 0;else noComics" class="comic-list cards">
+
+  <a class="comic-item" (click)="selectComic(comic)" *ngFor="let comic of comicList">
+    <figure class="card">
+      <img src="{{ comic.thumbnailURI }}" alt="Cover of {{ comic.title }}">
+      <figcaption>{{ comic.title }}</figcaption>
+      <figcaption *ngIf="validateId(comic)" class="faved" >🌟</figcaption>
+    </figure>
+  </a>
+
+</div>
+
+<ng-template #noComics>
+  <div>
+    <h1>Sorry, no comics available</h1>
+  </div>
+</ng-template>

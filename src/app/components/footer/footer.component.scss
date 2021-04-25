@@ -1,0 +1,27 @@
+@use 'index' as *;
+
+footer {
+  height: 6rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $marvel-grey;
+
+  padding: 0 1rem;
+}
+.marvel {
+  margin-left: 10px;
+}
+
+.copyright {
+  @include flex-center-center;
+  padding: 1rem 0;
+  color: $white;
+  flex-direction: column;
+  gap: 1rem;
+  a:hover {
+    color: $marvel-red;
+  }
+}
