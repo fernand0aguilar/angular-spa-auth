@@ -1,0 +1,34 @@
+@use '_index' as *;
+
+html {
+  font-size: $font-size-base;
+  background-color: $marvel-white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: $roboto-regular;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+h1, h2, h3 {
+  font-family: $roboto-condensed-regular;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+.marvel {
+  @include marvel;
+}

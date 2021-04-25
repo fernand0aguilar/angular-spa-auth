@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="auth-card">
+
+    <app-login *ngIf="isLoginMode;else signup"></app-login>
+    <ng-template #signup>
+      <app-sign-up></app-sign-up>
+    </ng-template>
+
+  </div>
+</div>

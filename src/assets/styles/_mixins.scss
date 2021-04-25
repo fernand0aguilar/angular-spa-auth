@@ -1,0 +1,56 @@
+@use './colors' as c;
+@use './fonts' as f;
+@use './sizes' as s;
+
+@mixin marvel {
+  background-color: c.$marvel-red;
+  padding: 0.35rem 0.1rem 0 0.1rem;
+
+  span {
+    color: c.$marvel-font-white;
+    font-family: f.$marvel-font;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+  }
+
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+@mixin w100h100 {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-style {
+  padding: 3rem 3rem 3rem 2rem;
+  background: c.$white;
+  box-shadow: 0 0 3rem rgba(c.$marvel-black, 0.45);
+  border-left: 1rem solid c.$marvel-red;
+}
+
+@mixin transform($transform) {
+  transform: $transform;
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+}
+
+@mixin transition($duration) {
+  transition: $duration;
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+  -ms-transition: $duration;
+  -o-transition: $duration;
+}

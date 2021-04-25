@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="intro">
+    <h2>Filters</h2>
+    <div class="filter-container">
+      <select name="year" [(ngModel)]="selectedYear" (change)="changeYear($event.target.value)">
+        <option value="{{year}}" *ngFor="let year of yearOptions"
+          [attr.selected]="selectedYear == year">{{year}}</option>
+      </select>
+      
+      <input placeholder="search for comics by name or characters"
+      name="searchField" [(ngModel)]="searchField" (change)="changeSearchField($event.target.value)"/>
+      
+      <div class="btn-group page-select">
+        <span>Pages:</span>
+        <button *ngFor="let page of comicPageMap | keyvalue"
+          [ngClass]="{'selected-page': selectedPage == page.key}"
+          class="page-btn" type="button" [value]="page.key"
+          (click)="changePage(page.key)">{{page.key}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-comic-list *ngIf="!isLoading;else loading" listType="full"></app-comic-list>
+
+
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>
