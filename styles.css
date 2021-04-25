@@ -1,0 +1,97 @@
+@font-face {
+  font-family: Marvel-Regular;
+  src: url('MarvelRegular-Dj83.ttf');
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('Roboto-Regular.ttf');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src: url('Roboto-Bold.ttf');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: Roboto-Condensed-Regular;
+  src: url('RobotoCondensed-Regular.ttf');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: Roboto-Condensed-Bold;
+  src: url('RobotoCondensed-Bold.ttf');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+h3 {
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+html {
+  font-size: 16px;
+  background-color: #DCDCDC;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Roboto-Regular;
+}
+*:focus {
+  outline: none;
+}
+h1, h2, h3 {
+  font-family: Roboto-Condensed-Regular;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.marvel {
+  background-color: #E62429;
+  padding: 0.35rem 0.1rem 0 0.1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.marvel span {
+  color: #FEFEFE;
+  font-family: Marvel-Regular;
+  font-size: 2.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=styles.css.map*/
